@@ -11,6 +11,20 @@ var roster = [
 
 function convert_roster_format(nestedArray) {
     // your convert code here
+    var judul = [];
+    var isi = [];
+    for (var i = 0; i < roster[0].length; i++) {
+      judul.push(roster[0][i]);
+    }
+    
+    for (var j = 1; j < roster.length; j++) {
+      var object = {}
+      for (var k = 0; k < roster[j].length; k++) {
+        object[judul[k]] = roster[j][k];
+      }
+      isi.push(object);
+    }
+    return isi
 }
 
 var object_roster = convert_roster_format(roster)

@@ -1,7 +1,6 @@
 "use strict"
 
 function tic_tac_toe_board() {
-  console.log("kitaaa lagi jalan")
   var xo_random = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"]
   var table = []
   var countO = 0;
