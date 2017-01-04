@@ -11,6 +11,27 @@ var roster = [
 
 function convert_roster_format(nestedArray) {
     // your convert code here
+
+    let objArr 	  = [];
+    let valArr    = [];
+    let colRoster = roster[0];
+
+    for(var i = 0; i < colRoster.length; i++){	// for loop untuk Value dari Array
+      valArr[i] = [];
+      for(var j = 1; j < roster.length ; j++){	// Value array melakukan push ke roster array
+        valArr[i].push(roster[j][i]);
+      }
+    }
+
+    for(var k = 0; k < valArr.length; k++){
+      let toObject = {};
+      for(var l = 0; l < colRoster.length; l++){
+      toObject[colRoster[l]] = valArr[l][k];
+
+      }
+      objArr.push(toObject);
+    }
+	return objArr;
 }
 
 var object_roster = convert_roster_format(roster)
