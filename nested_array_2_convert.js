@@ -12,8 +12,7 @@ var roster = [
 function convert_roster_format(nestedArray) {
 	let arr = [];
 	let key = nestedArray[0];
-	let a;
-
+	
 	for(var j = 1; j < nestedArray.length; j++){
 		let object = {};
 		for (var i = 0; i < nestedArray[j].length; ++i){
