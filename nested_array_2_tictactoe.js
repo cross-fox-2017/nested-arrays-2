@@ -18,15 +18,25 @@ function tic_tac_toe_board() {
     rand=Math.round(Math.random());
     for(var j=0;j<3;j++){
 
-      if(rand===1 && xCount<=5){
+      if(rand===1 && xCount<=5 ){
+
         table[i].push(x)
         xCount++;
         rand = 0;
+        if(xCount===5){
+          table[i].pop();
+          table[i].push(o);
+        }
+
       }
-      else if(rand===0 && oCount<=5){
+      else if(rand===0 && oCount<=5 ){
         table[i].push(o)
         oCount++;
         rand= 1;
+        if(oCount===5){
+          table[i].pop();
+          table[i].push(x);
+        }
       }
 
     }
