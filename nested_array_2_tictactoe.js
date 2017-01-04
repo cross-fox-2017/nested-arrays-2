@@ -1,6 +1,6 @@
 function tic_tac_toe_board() {
   var board = [];
-  var xo_random = ["X", "O", "X", "O", "X", "O", "X", "O", "X"]
+  var xo_random = ["X", "O", "X", "O", "X", "O", "X", "O", "X", "O"]
   for (var i = 0; i < 3; i++) {
     board[i] = []
     for (var j = 0; j < 3; j++){
