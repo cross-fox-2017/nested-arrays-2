@@ -4,13 +4,14 @@ function tic_tac_toe_board() {
   for (var i = 0; i < 3; i++) {
     board[i] = []
     for (var j = 0; j < 3; j++){
-      board[i].push(xo_random[j*i])
+      var randomer = Math.floor(Math.random()*xo_random.length)
+      board[i].push(xo_random[randomer])
+      xo_random.splice(randomer, 1)
     }
   }
   return board
 }
 function randomer (){
-  return Math.floor(Math.random()*xo_random.length)
 }
 
 console.log(randomer());
