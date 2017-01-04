@@ -11,7 +11,31 @@ var roster = [
 
 function convert_roster_format(nestedArray) {
     // your convert code here
+    var object = [];
+    var value  = [];
+    var column = roster[0]
+    for(var i = 0; i < column.length; i++){
+      value[i] = [];
+      for(var l = 1; l < roster.length ; l++){
+        value[i].push(roster[l][i]);
+      }
+    }
+
+    for(var j = 0; j < value.length; j++){
+      var ObjTemp = {};
+      for(var k = 0; k < column.length; k++){
+      ObjTemp[column[k]] = value[k][j];
+
+      }
+      object.push(ObjTemp);
+    }
+
+
+return object;
 }
+
+
+
 
 var object_roster = convert_roster_format(roster)
 console.log(object_roster[2])
