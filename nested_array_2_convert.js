@@ -10,11 +10,24 @@ var roster = [
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
 
 function convert_roster_format(nestedArray) {
-    // your convert code here
+  var arraySementara = []
+  for (var i = 0; i < roster.length; i++) {
+    if (i != 0 ) {
+      var tampung = {
+        'Number': roster[i][0],
+        'Name': roster[i][1],
+        'Position': roster[i][2],
+        'Point per Game': roster[i][3]
+      }
+      arraySementara.push(tampung)
+    }
+  }
+  // console.log(arraySementara);
+  return arraySementara
 }
 
 var object_roster = convert_roster_format(roster)
-console.log(object_roster[2])
+console.log(object_roster[0])
 
 // => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
 
