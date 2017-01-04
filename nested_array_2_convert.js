@@ -7,13 +7,28 @@ var roster = [
     ["22", "MK DiBoux ", "Small Forward ", [11, 0, 23, 17, 0]]
 ]
 
-// [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
+// [ [roster[0][0], roster[1][0] ], [roster[0][1], roster[1][1] ],...
 
 function convert_roster_format(nestedArray) {
-    // your convert code here
+  // buat array penampung
+  var arr = []
+
+  // lakukan looping untuk mengisi nilai array ke dalam Object
+  // lalu simpan object di dalam aray
+  for(var i = 1; i < roster.length; i++) {
+  var myObj = new Object;
+  myObj[ roster[0][0] ] = roster[i][0];
+  myObj[ roster[0][1] ] = roster[i][1];
+  myObj[ roster[0][2] ] = roster[i][2];
+  myObj[ roster[0][3] ] = roster[i][3];
+  arr.push(myObj);
+  }
+  return arr;
 }
 
+
 var object_roster = convert_roster_format(roster)
+
 console.log(object_roster[2])
 
 // => { "Number": 31, "Name": "Harvey Kay", "Position": "Shooting Guard", "Points per Game": [0, 30, 16, 0, 25] }
