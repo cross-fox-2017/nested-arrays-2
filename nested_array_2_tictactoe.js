@@ -3,8 +3,9 @@ for(var i=0;i<3;i++){
   var j=[ ];
   table.push(j);
 }
-
-
+function acak(arr){
+  return
+}
 function tic_tac_toe_board() {
   var xo_random = ["X", "O", "X", "O", "X", "O", "X", "O", "X"]
   var x= 'X';
@@ -14,21 +15,23 @@ function tic_tac_toe_board() {
   var oCount=0;
 
   for(var i=0;i<3;i++){
-
+    rand=Math.round(Math.random());
     for(var j=0;j<3;j++){
-      if(rand===0 && xCount<5){
+
+      if(rand===1 && xCount<=5){
         table[i].push(x)
         xCount++;
-        rand =1;
+        rand = 0;
       }
-      else if(rand===1 && oCount<5){
+      else if(rand===0 && oCount<=5){
         table[i].push(o)
         oCount++;
-        rand=0;
+        rand= 1;
       }
 
     }
   }
+
   return table;
 }
 
