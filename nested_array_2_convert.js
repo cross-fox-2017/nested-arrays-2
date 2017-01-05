@@ -23,10 +23,11 @@ function convert_roster_format(nestedArray) {
     for(let n = 0;n < roster[m].length; n++){
 
       objectArr[key[n]] = roster[m][n];
-    }
-    value.push(objectArr);
-  }
 
+    }
+  value.push(objectArr);
+
+  }
   return value;
   // your convert code here
 }
