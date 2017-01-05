@@ -8,9 +8,28 @@ var roster = [
 ]
 
 // [[roster[0][0], roster[1][0]], [roster[0][1], roster[1][1]],...
-
+var key = [];
+var value = [];
 function convert_roster_format(nestedArray) {
-    // your convert code here
+
+  for(let count = 0; count < roster[0].length;count++){
+    key.push(roster[0][count]);
+  }
+
+  for(let m = 1; m < roster.length; m++){
+
+    var objectArr = {};
+
+    for(let n = 0;n < roster[m].length; n++){
+
+      objectArr[key[n]] = roster[m][n];
+
+    }
+  value.push(objectArr);
+
+  }
+  return value;
+  // your convert code here
 }
 
 var object_roster = convert_roster_format(roster)
