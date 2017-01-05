@@ -5,9 +5,7 @@ function tic_tac_toe_board() {
   let board = [[],[],[]];
 
   for (let i = 0; i < 3; i++) {
-    let board =[]
     for (let j = 0; j < 3; j++) {
-      board.push([])
       let random = Math.random();
       if( x < 5 && o < 5){
         if (random > 0.5) {
