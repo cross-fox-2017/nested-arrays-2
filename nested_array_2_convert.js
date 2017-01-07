@@ -13,12 +13,13 @@ function convert_roster_format(nestedArray) {
   var arraySementara = []
   for (var i = 0; i < roster.length; i++) {
     if (i != 0 ) {
-      var tampung = {
-        'Number': roster[i][0],
-        'Name': roster[i][1],
-        'Position': roster[i][2],
-        'Point per Game': roster[i][3]
-      }
+      var tampung = {}
+      tampung[roster[0][0]] = roster[i][0]
+      tampung[roster[0][1]] = roster[i][1]
+      tampung[roster[0][2]] = roster[i][2]
+      tampung[roster[0][3]] = roster[i][3]
+
+      // console.log(tampung);
       arraySementara.push(tampung)
     }
   }
